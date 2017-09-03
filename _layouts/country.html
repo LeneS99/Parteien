@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="title-section">
+  <h1>{{ page.name }}</h1>
+</section>
+<section class="country-info-section">
+  <div class="grid">
+    <div class="country-info-map col-4">
+      {{ page.map }}
+    </div>
+    <div class="col-8 country-info-description">
+      <p>{{ page.description }}</p>
+    </div>
+  </div>
+</section>
+{% assign country_articles = site.articles | where: "country", page.name %}
+{% for topic in site.topics %}
+  <section class="topic-latest-news">
+    <h2>{{topic.name}}</h2>
+    {% assign ct_articles = country_articles | where: "topic", topic.name %}
+    {% for article in ct_articles limit:3 %}
+      {% include article-preview.html %}
+    {% endfor %}
+  </section>
+{% endfor %}

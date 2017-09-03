@@ -1,0 +1,12 @@
+<header id="home">
+  <div class="container centered">
+      <a href="/index.html"><img class="logo" src="/images/The_New_York_Times_logo.png" alt="logo"></a>
+  </div>
+    <nav class="centered">
+      <div class="container">
+        {% for topic in site.topics %}
+          <a href="{{topic.url}}">{{topic.name}}</a>
+        {% endfor %}
+      </div>
+    </nav>
+</header>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="banner-section" style="background-image: url(/images/countries/{{ page.banner-image }})">
+  <h1>{{ page.name }}</h1>
+</section>
+<section class="topic-info-section">
+  <div class="grid">
+    <div class="col-12">
+      <p>{{ page.description }}</p>
+    </div>
+  </div>
+</section>
+
+  {% assign topic_articles = site.articles | where: "topic", page.name %}
+  {% for country in site.countries %}
+    <section class="topic-latest-news">
+      <a href="{{country.url}}"><h2>{{country.name}}</h2></a>
+      {% assign tc_articles = topic_articles | where: "country", country.name %}
+      {% for article in tc_articles limit:3 %}
+        {% include article-preview.html %}
+      {% endfor %}
+    </section>
+  {% endfor %}

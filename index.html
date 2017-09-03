@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="headline-section">
+  <a class="link white-bg" href="{{site.articles.last.url}}">
+    <div class="grid-bottom banner-image" style="background-image: url(http://lorempixel.com/400/200)">
+      <div class="banner-overlay col-12">
+        <h1>{{site.articles.last.title}}</h1>
+        <p> <i class="fa fa-flag" aria-hidden="true"></i>
+           {{site.articles.last.country}} <i class="fa fa-rss" aria-hidden="true"></i>
+           {{site.articles.last.topic}} <i class="fa fa-bolt" aria-hidden="true"></i>
+           {{site.articles.last.layout}}</p>
+
+      </div>
+    </div>
+  </a>
+</section>
+<div class="grid">
+  <section class="article-list col-9">
+    <div class="">
+      {% for article in site.articles limit:20 %}
+        {% include article-preview.html %}
+      {% endfor %}
+    </div>
+  </section>
+  <aside class="col-3">
+      {% for country in site.countries %}
+      <div class="country-banner-block">
+        <a href="{{country.url}}">
+          <div class="country-banner grid-middle-center" style="background-image: url(/images/countries/{{country.outline-image}})">
+            <h3>{{country.name}}</h3>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+  </aside>
+</div>

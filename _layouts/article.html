@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<section class="title-section">
+  <h1>{{page.title}}</h1>
+  <div class="shortdescription">
+      <b><p>{{page.description}}</p></b>
+  </div>
+</section>
+<section class="article-image-section">
+  <div class="articleimg" style="background-image: url">
+    <!-- a backgroundimage for the div -->
+  </div>
+</section>
+<div class="grid">
+  <section class="article-text-section col-9">
+      <p>{{page.text}}</p>
+  </section>
+  <aside class="col-3">
+  </aside>
+</div>
+<div class="grid country-topic-description">
+  <div class="country col-2 centered">
+    <a href="/countries/{{page.country}}"><p><img src="/images/countries/{{page.flag}}" alt="flag"></p></a>
+  </div>
+  <div class="topic col-2 centered">
+    <a href="/topics/{{page.topic}}"><p>{{page.topic}}</p></a>
+  </div>
+</div>
+<div class="relatedarticles">
+  <div class="grid">
+    {% for article in site.articles limit:3 %}
+    <div class="col-4">
+      {% include article-preview.html %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
