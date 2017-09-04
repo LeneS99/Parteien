@@ -1,21 +1,19 @@
 ---
 layout: default
 ---
-<section class="headline-section">
-  <a class="link white-bg" href="{{site.articles.last.url}}">
-    <div class="grid-bottom banner-image" style="background-image: url(http://lorempixel.com/400/200)">
+<section> <!-- Abschnitt mit Kurzvorstellungen Partein -->
+  <div class="grid sectionrow">
+    <div class="grid-bottom col-4 banner-image" style="background-image: url(images/spd/spd-programm-deckblatt.jpg)">
+      <div class="partei-logo">
+        <img class="partei-logo"src="images/spd/spd_logo_jpg-data.jpg" alt="Partei Logo">
+      </div>
       <div class="banner-overlay col-12">
-        <h1>{{site.articles.last.title}}</h1>
-        <p> <i class="fa fa-flag" aria-hidden="true"></i>
-           {{site.articles.last.country}} <i class="fa fa-rss" aria-hidden="true"></i>
-           {{site.articles.last.topic}} <i class="fa fa-bolt" aria-hidden="true"></i>
-           {{site.articles.last.layout}}</p>
-
+        <p class="centered">Martin Schulz</p>
       </div>
     </div>
-  </a>
+  </div>
 </section>
-<div class="grid">
+<!-- <div class="grid">
   <section class="article-list col-9">
     <div class="">
       {% for article in site.articles limit:20 %}
@@ -34,4 +32,4 @@ layout: default
       </div>
       {% endfor %}
   </aside>
-</div>
+</div> -->

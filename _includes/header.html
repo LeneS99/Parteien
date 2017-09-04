@@ -1,9 +1,19 @@
 <header id="home">
     <nav class="centered">
       <div class="container">
-        {% for topic in site.topics %}
-          <a href="{{topic.url}}">{{topic.name}}</a>
-        {% endfor %}
+        <ul>
+          <li><a href="#">Parteien</a>
+            <ul>
+              <li class="submenu"><a href="#">CDU</a></li>
+              <li class="submenu"><a href="#">SPD</a></li>
+              <li class="submenu"><a href="#">FDP</a></li>
+              <li class="submenu"><a href="#">Die Grünen</a></li>
+              <li class="submenu"><a href="#">Die Linke</a></li>
+              <li class="submenu"><a href="#">AfD</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Im Vergleich</a></li>
+        </ul>
       </div>
     </nav>
 </header>
