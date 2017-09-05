@@ -3,33 +3,17 @@ layout: default
 ---
 <section> <!-- Abschnitt mit Kurzvorstellungen Partein -->
   <div class="grid sectionrow">
-    <div class="grid-bottom col-4 banner-image" style="background-image: url(images/spd/spd-programm-deckblatt.jpg)">
-      <div class="partei-logo">
-        <img class="partei-logo"src="images/spd/spd_logo_jpg-data.jpg" alt="Partei Logo">
-      </div>
-      <div class="banner-overlay col-12">
-        <p class="centered">Martin Schulz</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- <div class="grid">
-  <section class="article-list col-9">
-    <div class="">
-      {% for article in site.articles limit:20 %}
-        {% include article-preview.html %}
-      {% endfor %}
-    </div>
-  </section>
-  <aside class="col-3">
-      {% for country in site.countries %}
-      <div class="country-banner-block">
-        <a href="{{country.url}}">
-          <div class="country-banner grid-middle-center" style="background-image: url(/images/countries/{{country.outline-image}})">
-            <h3>{{country.name}}</h3>
+    {% for topic in site.topics %}
+      <div class="grid-bottom col-4 banner-image" style="background-image: url(images/{{ topic.banner-image }})">
+        <a href="{{ topic.url }}">
+          <div class="partei-logo">
+            <img class="partei-logo"src="images/{{ topic.partei-logo }}" alt="Partei Logo">
+          </div>
+          <div class="banner-overlay col-12">
+            <p class="centered">{{ topic.kandidat }}</p>
           </div>
         </a>
       </div>
-      {% endfor %}
-  </aside>
-</div> -->
+    {% endfor %}
+  </div>
+</section>
