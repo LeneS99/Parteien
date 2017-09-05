@@ -3,14 +3,14 @@ layout: default
 ---
 <section> <!-- Abschnitt mit Kurzvorstellungen Partein -->
   <div class="grid sectionrow">
-    {% for topic in site.topics %}
-      <div class="grid-bottom col-4 banner-image" style="background-image: url(images/{{ topic.banner-image }})">
-        <a href="{{ topic.url }}">
+    {% for party in site.parties %}
+      <div class="grid-bottom col-4 banner-image" style="background-image: url(images/{{ party.banner-image }})">
+        <a href="{{ party.url }}">
           <div class="partei-logo">
-            <img class="partei-logo"src="images/{{ topic.partei-logo }}" alt="Partei Logo">
+            <img class="partei-logo"src="images/{{ party.partei-logo }}" alt="Partei Logo">
           </div>
           <div class="banner-overlay col-12">
-            <p class="centered">{{ topic.kandidat }}</p>
+            <p class="centered">{{ party.kandidat }}</p>
           </div>
         </a>
       </div>

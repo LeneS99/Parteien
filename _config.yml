@@ -1,7 +1,3 @@
 collections:
-  articles:
-    output: true
-  countries:
-    output: true
-  topics:
+  parties:
     output: true
