@@ -161,6 +161,12 @@ section.main a:hover{
   border: 3px solid rgb(88, 88, 88);
 }
 
+section.main a:active{
+  color: rgb(88, 88, 88);
+  border: border: 3px solid rgb(88, 88, 88);
+  background-color: darkgrey;
+}
+
 /*header nav{
   background-color: #dcdcdc;
   border-top: 1px solid #8e8e8e;
