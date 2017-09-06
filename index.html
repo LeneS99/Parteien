@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-<section> <!-- Abschnitt mit Kurzvorstellungen Partein -->
+
+<section class="main">
+  {% include header.html %}
+</section>
+<section id="parteien" class="text-section"> <!-- Abschnitt mit Kurzvorstellungen Partein -->
   <div class="grid sectionrow">
     {% for party in site.parties %}
       <div class="grid-bottom col-4 banner-image" style="background-image: url(images/{{ party.banner-image }})">
