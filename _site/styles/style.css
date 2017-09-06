@@ -73,7 +73,7 @@ section, header, footer{
 }
 
 section{
-  padding: 10vh 5%;
+
 }
 
 aside{
@@ -107,6 +107,10 @@ img{
 .text-section{
   max-width: 1100px;
   margin: 0 auto;
+}
+
+#parteien{
+  padding-top: 130px;
 }
 
 .headline-section{
@@ -146,7 +150,7 @@ header{
   font-family: Montserrat,sans-serif;
   font-size: 1rem;
   position: relative;
-  top: 21rem;
+  top: 25rem;
 }
 
 .nav-bar a{
@@ -155,6 +159,7 @@ header{
   border: 3px solid black;
   color: black;
 }
+
 
 section.main a:hover{
   color: rgb(88, 88, 88);
@@ -165,6 +170,17 @@ section.main a:active{
   color: rgb(88, 88, 88);
   border: border: 3px solid rgb(88, 88, 88);
   background-color: darkgrey;
+}
+
+.fixed-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 2%;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 12px 1px rgb(143,143,143);
+  margin: 0;
 }
 
 /*header nav{
@@ -291,7 +307,6 @@ nav ul ul li:hover > ul {
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  opacity: 0.8;
 }
 
 
