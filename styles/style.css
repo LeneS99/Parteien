@@ -9,7 +9,6 @@
   - MODULAR ELEMENTS
     - Element Name
   - FORMS
-
 ---------------------------
 Website Fonts: 'Lato', sans-serif;
 Website Colours: List colour hex codes here for reference
@@ -188,48 +187,40 @@ section.main a:active{
   border-top: 1px solid #8e8e8e;
   border-bottom: 1px solid #8e8e8e;
 }
-
 header nav a{
   padding: 1rem 2rem;
   display: inline-block;
   font-weight: bold;
   font-size: 22px;
 }
-
 nav ul {
   margin: 0;
   padding: 0;
 }
-
 nav a {
   display: block;
   color: #fff;
   text-decoration: none;
 }
-
 header .logo{
   max-width: 300px;
   padding: 1rem;
 }
-
 nav {
   float: left;
   width: 100%;
   background: #3a3a3a;
   font-size: 16px;
 }
-
 nav ul {
   margin: 0;
   padding: 0;
 }
-
 nav a {
   display: block;
   color: #fff;
   text-decoration: none;
 }
-
 nav ul li {
   position: relative;
   float: left;
@@ -237,11 +228,9 @@ nav ul li {
   color: #fff;
   transition: 0.5s;
 }
-
 nav ul li a {
   padding: 20px;
 }
-
 nav ul > li.submenu > a:after {
   position: relative;
   float: right;
@@ -252,7 +241,6 @@ nav ul > li.submenu > a:after {
   border-top: 5px solid #fff;
   border-bottom: 5px solid transparent;
 }
-
 nav ul ul li.submenu > a:after {
   margin-left: auto;
   margin-right: -10px;
@@ -261,11 +249,9 @@ nav ul ul li.submenu > a:after {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-
 nav ul li:hover {
   background: #4096ee;
 }
-
 nav ul ul {
   position: absolute;
   top: -9999px;
@@ -274,26 +260,21 @@ nav ul ul {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
 nav ul ul li {
   float: none;
   width: 200px;
   border-bottom: 1px solid #555;
 }
-
 nav ul ul li a {
   padding: 10px 20px;
 }
-
 nav ul ul li:last-child {
   border-bottom: none;
 }
-
 nav ul li:hover > ul {
   top: 100%;
   left: 0;
 }
-
 nav ul ul li:hover > ul {
   top: 0;
   left: 200px;
@@ -389,8 +370,6 @@ section.top-article{
   padding-right: 36rem;
 }
 
-/* ---- COUNTRIES PAGE STYLES ----------------------------- */
-
 /* ---- TOPICS PAGE STYLES -------------------------------- */
 
 .topic-info-section{
@@ -429,7 +408,7 @@ section.top-article{
 
 
 
-/* ---- PARTEI KURZVORSTELLUNG HOMEPAGE --------------*/
+/* ---- HOMEPAGE --------------*/
 
 div.partei-logo{
   width: 25%;
@@ -440,4 +419,20 @@ div.partei-logo{
 
 .partei-logo{
   border-radius: 50%;
+}
+
+.sectionrow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+}
+
+.space-rows{
+  position: relative;
+  top: 6rem;
 }
