@@ -122,6 +122,10 @@ img{
   margin: 0 auto;
 }
 
+.container-pages{
+  margin-top: 10%;
+}
+
 .banner-image{
   height: 29vw;
   background-size: cover;
@@ -173,6 +177,17 @@ section.main a:active{
 }
 
 .fixed-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 2%;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 12px 1px rgb(143,143,143);
+  margin: 0;
+}
+
+.nav-bar-sonst{
   position: fixed;
   top: 0;
   width: 100%;
@@ -324,7 +339,7 @@ footer {
 
 .footer-heading{
   text-align: left;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
   padding-bottom: 1px;
   margin-bottom: 1rem;
 }
@@ -332,7 +347,7 @@ footer {
 .copy-info{
   background-color: rgba(0, 0, 0, 0.81);
   color: #bfbfbf;
-  padding: 5px;
+  padding: 15px;
 }
 
 .copy-info h4{
@@ -373,4 +388,33 @@ div.partei-logo{
 .space-rows{
   position: relative;
   top: 6rem;
+}
+
+/* ---- PARTY PAGE STYLE ---------------------------------- */
+
+.banner-section{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  padding-bottom: 1%;
+  margin-bottom: 5%;
+}
+
+.banner-section img{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.banner-section h1{
+  position: relative;
+  top: 1.5rem;
+  left: 32.2rem;
+}
+
+.party-section{
+  max-width: 1100px;
+  margin: 0 auto;
 }

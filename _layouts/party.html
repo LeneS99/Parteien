@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: default2
 ---
-<section class="banner-section" style="background-image: url(/images/countries/{{ page.banner-image }})">
-  <h1>{{ page.name }}</h1>
+<section class="banner-section grid" style="background-image: url(/images/countries/{{ page.banner-image }})">
+  <img src="/images/{{page.partei-logo}}" alt="">
+  <h1>{{ page.full-name }}</h1>
 </section>
-<section class="topic-info-section">
+<section class="party-section">
   <div class="grid">
     <div class="col-12">
       <p>{{ page.description }}</p>
