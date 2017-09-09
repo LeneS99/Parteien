@@ -10,7 +10,7 @@
     - Element Name
   - FORMS
 ---------------------------
-Website Fonts: 'Lato', sans-serif;
+Website Fonts: Titillium Web (Heading), Montserrat (p,links etc.)
 Website Colours: List colour hex codes here for reference
 ----------------------------
 */
@@ -33,13 +33,13 @@ Website Colours: List colour hex codes here for reference
 
 /* ---- UNIVERSAL STYLES ---------------------------------- */
 body{ /* font aussuchen und hier eintragen, link in html eintragen */ (head)
-  font-family: 'Quattrocento', serif;
+  font-family: 'Montserrat', sans-serif;
   color: #272838;
   background-color: #fcfcfc;
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Quattrocento', serif;
+  font-family: 'Titillium', sans-serif;
 
 }
 
@@ -59,7 +59,7 @@ p{
   font-size: 22px;
   line-height: 1.8;
   color: #222222;
-  font-family: Helvetica;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -136,7 +136,7 @@ img{
 .banner-overlay p{
   margin-top: 0.5rem;
   color: #bfbfbf;
-  font-size: 14.6px;
+  font-size: 13.9px;
 }
 
 /* ---- HEADER SECTION STYLES ----------------------------- */
@@ -146,7 +146,7 @@ header{
 
 .nav-bar{
   text-transform: uppercase;
-  font-family: Montserrat,sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   position: relative;
   top: 25rem;
@@ -397,8 +397,35 @@ section.top-article{
 }
 
 /* ---- FOOTER SECTION STYLES ----------------------------- */
-.footerrow.grid{
-  margin-top: 10%;
+footer {
+  position: relative;
+  top: 10em;
+  margin: 0 auto;
+  background-color: grey;
+}
+
+.footerrow{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sitemap{
+  display: block;
+}
+
+.footer-heading{
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.copy-info{
+  background-color: rgba(0, 0, 0, 0.81);
+  color: #bfbfbf;
+  padding: 5px;
+}
+
+.copy-info h4{
+  font-family: monospace;
 }
 
 #footerbutton{

@@ -1,3 +1,20 @@
+// Smooth scroll
+$(document).ready(function() {
+
+  $('.slide-section').click(function(e) {
+
+    var linkHref = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(linkHref).offset().top
+    }, 1000);
+
+    e.preventDefault();
+  });
+});
+
+
+// Burger Menu
   $( document ).ready(function() {
    $(".burger-button").click(function(){
      $(".burger-menu").slideToggle();
@@ -5,7 +22,7 @@
    });
 });
 
-// Stiky nav on homepage
+// Sticky nav on homepage
 
 var targetPos = $('.nav-bar a').offset().top;
 
