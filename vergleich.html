@@ -1,6 +1,36 @@
 ---
 layout: default2
+themen:
+  - thema: Bildung
+    href: bildung
+  - thema: Digitalisierung
+    href: digitalisierung
+  - thema: Steuern
+    href: steuern
+  - thema: Sicherheit
+    href: sicherheit
+  - thema: EU
+    href: eu
+  - thema: Familie
+    href: familie
+  - thema: Inklusion
+    href: inklusion
 ---
+<section class="text-section button-section">
+  {% for themen in page.themen%}
+  <div class="button">
+      <a href="#{{themen.href}}">{{themen.thema}}</a>
+  </div>
+  {% endfor %}
+</section>
+
 <section class="text-section">
-  
+  <div class="title">
+      <a href="{{themen.href}}">{{themen.thema}}</a>
+  </div>
+  <div class="grid">
+    <div class="partei col-4">
+      
+    </div>
+  </div>
 </section>
