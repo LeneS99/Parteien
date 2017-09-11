@@ -1,3 +1,5 @@
 collections:
   parties:
     output: true
+  topics:
+    output: true

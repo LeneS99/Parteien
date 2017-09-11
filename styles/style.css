@@ -193,6 +193,17 @@ section.main a:active{
   margin: 0;
 }
 
+.nav-bar-sonst a:hover{
+  color: rgb(88, 88, 88);
+  border: 3px solid rgb(88, 88, 88);
+}
+
+.nav-bar-sonst a:active{
+  color: rgb(88, 88, 88);
+  border: border: 3px solid rgb(88, 88, 88);
+  background-color: darkgrey;
+}
+
 
 /* ---- MAIN SECTION STYLES ------------------------------- */
 
@@ -436,5 +447,10 @@ div.partei-logo{
 }
 
 .title{
-  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.title h2{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }

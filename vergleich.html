@@ -3,8 +3,14 @@ layout: default2
 themen:
   - thema: Bildung
     href: bildung
+    afd: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    cdu: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    fdp: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   - thema: Digitalisierung
     href: digitalisierung
+    afd: aljhfljhdsfbjlabdfha
+    cdu: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    fdp: aldfjhgsdashjDFHGBVCHFSZRFHSDBISFDF
   - thema: Steuern
     href: steuern
   - thema: Sicherheit
@@ -24,13 +30,49 @@ themen:
   {% endfor %}
 </section>
 
-<section class="text-section">
-  <div class="title">
-      <a href="{{themen.href}}">{{themen.thema}}</a>
+
+<section class="text-section vergleich">
+  {% for themen in page.themen%}
+  <div id="{{themen.href}}"class="title centered">
+      <h2>{{themen.thema}}</h2>
   </div>
   <div class="grid">
-    <div class="partei col-4">
-      
+    <div class="partei col-3">
+      <p>AfD</p>
+    </div>
+    <div class="beschreibung col-9">
+      <p>{{themen.afd}}</p>
+    </div>
+    <div class="partei col-3">
+      CDU
+    </div>
+    <div class="beschreibung col-9">
+      {{themen.cdu}}
+    </div>
+    <div class="partei col-3">
+      Die Grünen
+    </div>
+    <div class="beschreibung col-9">
+      {{themen.die-gruenen}}
+    </div>
+    <div class="partei col-3">
+      Die Linke
+    </div>
+    <div class="beschreibung col-9">
+      {{themen.die-linke}}
+    </div>
+    <div class="partei col-3">
+      FDP
+    </div>
+    <div class="beschreibung col-9">
+      {{themen.fdp}}
+    </div>
+    <div class="partei col-3">
+      SPD
+    </div>
+    <div class="beschreibung col-9">
+      {{themen.spd}}
     </div>
   </div>
+  {% endfor %}
 </section>
