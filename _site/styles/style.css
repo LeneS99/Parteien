@@ -418,6 +418,18 @@ div.partei-logo{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 1%;
+}
+
+.fixed-button-section{
+  position: fixed;
+  top: 4.7rem;
+  padding: 1%;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 12px 1px rgb(143,143,143);
+  max-width: -webkit-fill-available;
 }
 
 .button{
@@ -448,9 +460,14 @@ div.partei-logo{
 
 .title{
   margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 .title h2{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+}
+
+.partei-zeile{
+  margin-bottom: 1%;
 }

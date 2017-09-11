@@ -5,10 +5,13 @@ themen:
     href: bildung
     afd: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     cdu: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    die-gruenen: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    die-linke: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     fdp: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    spd: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   - thema: Digitalisierung
     href: digitalisierung
-    afd: aljhfljhdsfbjlabdfha
+    afd: aljhfljhdsfbjlabdfha Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     cdu: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     fdp: aldfjhgsdashjDFHGBVCHFSZRFHSDBISFDF
   - thema: Steuern
@@ -21,11 +24,13 @@ themen:
     href: familie
   - thema: Inklusion
     href: inklusion
+    die-linke: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    spd: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ---
-<section class="text-section button-section">
+<section id="#button-section" class="text-section button-section">
   {% for themen in page.themen%}
   <div class="button">
-      <a href="#{{themen.href}}">{{themen.thema}}</a>
+      <a href="#{{themen.href}}" class="smooth-scroll">{{themen.thema}}</a>
   </div>
   {% endfor %}
 </section>
@@ -33,46 +38,58 @@ themen:
 
 <section class="text-section vergleich">
   {% for themen in page.themen%}
-  <div id="{{themen.href}}"class="title centered">
+  <div id="{{themen.href}}" class="title centered">
       <h2>{{themen.thema}}</h2>
   </div>
   <div class="grid">
-    <div class="partei col-3">
-      <p>AfD</p>
+    <div class="partei-zeile grid">
+      <div class="partei col-3">
+        <p>AfD</p>
+      </div>
+      <div class="beschreibung col-9">
+        <p>{{themen.afd}}</p>
+      </div>
     </div>
-    <div class="beschreibung col-9">
-      <p>{{themen.afd}}</p>
+    <div class="partei-zeile grid">
+      <div class="partei col-3">
+        <p>CDU</p>
+      </div>
+      <div class="beschreibung col-9">
+        <p>{{themen.cdu}}</p>
+      </div>
     </div>
-    <div class="partei col-3">
-      CDU
+    <div class="partei-zeile grid">
+      <div class="partei col-3">
+        <p>Die Grünen</p>
+      </div>
+      <div class="beschreibung col-9">
+        <p>{{themen.die-gruenen}}</p>
+      </div>
     </div>
-    <div class="beschreibung col-9">
-      {{themen.cdu}}
+    <div class="partei-zeile grid">
+      <div class="partei col-3">
+        <p>Die Linke</p>
+      </div>
+      <div class="beschreibung col-9">
+        <p>{{themen.die-linke}}</p>
+      </div>
     </div>
-    <div class="partei col-3">
-      Die Grünen
+    <div class="partei-zeile grid">
+      <div class="partei col-3">
+        <p>FDP</p>
+      </div>
+      <div class="beschreibung col-9">
+        <p>{{themen.fdp}}</p>
+      </div>
     </div>
-    <div class="beschreibung col-9">
-      {{themen.die-gruenen}}
-    </div>
-    <div class="partei col-3">
-      Die Linke
-    </div>
-    <div class="beschreibung col-9">
-      {{themen.die-linke}}
-    </div>
-    <div class="partei col-3">
-      FDP
-    </div>
-    <div class="beschreibung col-9">
-      {{themen.fdp}}
-    </div>
-    <div class="partei col-3">
-      SPD
-    </div>
-    <div class="beschreibung col-9">
-      {{themen.spd}}
-    </div>
+      <div class="partei-zeile grid">
+        <div class="partei col-3">
+          <p>SPD</p>
+        </div>
+        <div class="beschreibung col-9">
+          <p>{{themen.spd}}</p>
+        </div>
+      </div>
   </div>
   {% endfor %}
 </section>
