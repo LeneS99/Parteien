@@ -1,17 +1,19 @@
 // Sticky nav on homepage
-var targetPos = $('.nav-bar a').offset().top;
+if ( $('body').hasClass('homepage') ) {
+  var targetPos = $('.nav-bar a').offset().top;
 
-$(window).scroll(function() {
-  var scrollPos = $(this).scrollTop();
+  $(window).scroll(function() {
+    var scrollPos = $(this).scrollTop();
 
-if ( scrollPos > targetPos ) {
-  $('#home-navigation').addClass('fixed-nav');
-} else {
-  $('#home-navigation').removeClass('fixed-nav');
+  if ( scrollPos > targetPos ) {
+    $('#home-navigation').addClass('fixed-nav');
+  } else {
+    $('#home-navigation').removeClass('fixed-nav');
+  }
+  });
 }
-});
 
-//Sticky Button Bar on VERGLEICH
+//Sticky Button Bar on comparison.html
 $(window).scroll(function() {
   var scrollPos = $(this).scrollTop();
 
