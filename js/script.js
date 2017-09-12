@@ -14,13 +14,15 @@ if ( $('body').hasClass('homepage') ) {
 }
 
 //Sticky Button Bar on comparison.html
+var targetPos = $('#button-section').offset().top;
+
 $(window).scroll(function() {
   var scrollPos = $(this).scrollTop();
 
-  if ( scrollPos > 500 ) {
-    $('#button-section').addClass('fixed-nav');
+  if ( scrollPos > targetPos ) {
+    $('#button-section').addClass('fixed-button-section');
   } else {
-    $('#button-section').removeClass('fixed-nav')
+    $('#button-section').removeClass('fixed-button-section')
   }
 });
 
